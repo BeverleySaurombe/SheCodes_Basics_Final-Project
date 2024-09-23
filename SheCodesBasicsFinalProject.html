@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Beverley Saurombe's SheCodesBasicsFinalProject</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background: radial-gradient(
+          circle at 0% 0.5%,
+          rgb(241, 241, 242) 0.1%,
+          rgb(224, 226, 228) 100.2%
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #272044;
+        text-align: center;
+        font-size: 34px;
+        margin: 0;
+        font-weight: 900;
+      }
+
+      h2 {
+        text-align: center;
+        color: #885df1;
+        padding: 0;
+        margin: 0;
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #272044;
+        margin: 20px 50px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        font-family: PT Mono, monospace;
+        text-align: center;
+      }
+
+      img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 30px;
+      }
+
+      button {
+        border-radius: 25px;
+        margin: 0 auto;
+        display: block;
+        background-color: #fff;
+        border: 1px solid #885df1;
+        color: #885df1;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        text-decoration: none;
+        transition: all 200ms ease;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        color: #fff;
+        background-color: #885df1;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px;
+        text-align: center;
+        padding: 10px;
+        background: radial-gradient(
+          circle at 0% 0.5%,
+          rgb(241, 241, 242) 0.1%,
+          rgb(224, 226, 228) 100.2%
+        );
+        display: grid;
+        border: 30px solid black;
+        border-radius: 80px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .learn-more {
+        color: #7d51e8;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        font-style: italic;
+        text-transform: uppercase;
+        text-decoration: wavy;
+      }
+
+      .highlight {
+        color: #885df2;
+      }
+
+      a {
+        text-align: center;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        🌠🌠 <br />
+        Stargazing Experience with <em>Beverley!</em>
+      </h1>
+
+      <hr />
+      <h2>We love stars over here🌟</h2>
+      <hr />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/131/202/original/Nightt-Sky-Notes-Partner-Article-logo-5001.jpg?1719916432"
+        alt="A picture of a man and child stargazing"
+      />
+
+      <p>
+        Join us for an <span class="highlight">unforgettable</span> night under
+        the stars! Escape the city lights and immerse yourself in the
+        breathtaking beauty of the cosmos. Whether you're a seasoned astronomer
+        or a curious novice, this stargazing event promises magical views of
+        constellations, planets, and distant galaxies.
+        <strong>
+          Bring your friends and family for an evening of admiring God's
+          creation</strong
+        >
+        – you won't want to miss it!
+      </p>
+
+      <a
+        href="https://en.wikipedia.org/wiki/Stargaze"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more on Wikipedia
+      </a>
+      <br />
+      <button>Register Now</button>
+
+      <p class="footer">
+        This page was built by
+        <a href="https://www.linkedin.com/in/beverleysaurombe" target="_blank">
+          Beverley Saurombe
+        </a>
+      </p>
+    </div>
+
+    <script>
+      function registerNow() {
+        let name = prompt("What is your first name?");
+        let surname = prompt("What is your surname?");
+
+        alert("Hello " + name + " " + surname + "😄");
+
+        let h1 = document.querySelector("h1");
+        if (name.length > 0) {
+          h1.innerHTML =
+            "Thank you, " +
+            name +
+            " " +
+            surname +
+            "! We look forward to hosting you!";
+        } else {
+          h1.innerHTML =
+            "Sorry, " +
+            name +
+            surname +
+            "! We need your name to make a reservation!";
+        }
+      }
+
+      let registerButton = document.querySelector("button");
+      registerButton.addEventListener("click", registerNow);
+    </script>
+  </body>
+</html>
